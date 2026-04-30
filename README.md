@@ -1,6 +1,6 @@
-﻿\#E‑Commerce Data Analysis – Olist Dataset
+#  E‑Commerce Data Analysis – Olist Dataset
 
-\## Project Overview
+## Project Overview
 
 This project analyzes the Olist Brazilian E‑Commerce dataset to uncover insights about sales performance, customer behavior, product trends, and retention.
 
@@ -10,37 +10,36 @@ As a data analyst, I performed data cleaning, SQL modeling, cohort analysis, RFM
 
 
 
-\## Business Questions
+## Business Questions
+### Sales & Growth
 
-\###Sales \& Growth
+- How are sales changing over time
 
-\- How are sales changing over time
+- How are orders changing over time
 
-\- How are orders changing over time
+- How is the business growing overall
 
-\- How is the business growing overall
+### Customer Behavior
 
-\###Customer Behavior
+- Who are the most valuable customers
 
-\- Who are the most valuable customers
+- Who are the most frequent customers
 
-\- Who are the most frequent customers
+- Which drives growth more: high‑value purchases or frequent purchases
 
-\- Which drives growth more: high‑value purchases or frequent purchases
+- How many customers return after their first purchase
 
-\- How many customers return after their first purchase
+- What is the month‑over‑month retention rate for each cohort
 
-\- What is the month‑over‑month retention rate for each cohort
+### Product Performance
 
-\###Product Performance
+- Which product categories generate the most revenue
 
-\- Which product categories generate the most revenue
-
-\- Which individual products generate the most revenue
-
+- Which individual products generate the most revenue
 
 
-\## Dataset
+
+## Dataset
 
 Source: Olist Brazilian E‑Commerce Public Dataset
 
@@ -51,87 +50,84 @@ orders, customers, order\_items, products, sellers, payments
 The dataset includes order details, customer demographics, product information, payments, and delivery performance.
 
 
+## Tools Used
 
-\## Tools Used
+- SQL Server – data extraction,Modeling, joins, transformations and analysis
 
-\- SQL Server – data extraction,Modeling, joins, transformations and analysis
+- Power BI – analysis, DAX, Visualization and dashboard
 
-\- Power BI – analysis, DAX, Visualization and dashboard
+- Excel – data samples preparation and data dictionary preparation
 
-\- Excel – data samples preparation and data dictionary preparation
-
-\- GitHub – documentation and version control
-
-
-
-\## Data Preparation
-
-\###Key steps performed:
-
-\- Identified and resolved data duplication by defining correct data grain at the order-item level.
-
-\- Designed star schema data model with fact and dimension tables
-
-\- Joined tables using primary/foreign keys
-
-\- Corrected Month-over-Month growth logic for missing-month scenarios using chronological date sequencing
-
-\- Filtered delivered orders
-
-\- Standardized data types
-
-\- Calculated order value and delivery time
-
-\- Removed duplicates
-
-\- Created additional calculated fields for analysis
+- GitHub – documentation and version control
 
 
 
-\## Analysis Summary
+## Data Preparation
 
-\###Sales Performance
+### Key steps performed:
 
-\- Monthly revenue and order trends analysed
+- Identified and resolved data duplication by defining correct data grain at the order-item level.
 
-\- Calculated YTD cumulative revenue.
+- Designed star schema data model with fact and dimension tables
+
+- Joined tables using primary/foreign keys
+
+- Corrected Month-over-Month growth logic for missing-month scenarios using chronological date sequencing
+
+- Filtered delivered orders
+
+- Standardized data types
+
+- Calculated order value and delivery time
+
+- Removed duplicates
+
+- Created additional calculated fields for analysis
+
+
+
+## Analysis Summary
+
+### Sales Performance
+
+- Monthly revenue and order trends analysed
+
+- Calculated YTD cumulative revenue.
 
 Insight:
 
-\- Monthly order volume shows an alternating rise-and-drop pattern, suggesting cyclical demand or promotional timing effects.
+- Monthly order volume shows an alternating rise-and-drop pattern, suggesting cyclical demand or promotional timing effects.
 
-\- Cumulative YTD sales reached 8.45M in 2018,showing strong overall yearly performance
+- Cumulative YTD sales reached 8.45M in 2018,showing strong overall yearly performance
 
-###Customer Analysis (RFM)
+### Customer Analysis (RFM)
 
 Segmented customers by:
 
-\- Recency
+- Frequency
 
-\- Frequency
-
-\- Monetary value
+- Monetary value
 
 Insight: 
 
-\- 94% of total revenue from one-time buyers; if we include coupon on next purchase to increase frequency
+- 94% of total revenue from one-time buyers; if we include coupon on next purchase to increase frequency
 
-\- Only 0.01% of customers qualify as loyal, highlighting a major retention gap. Notably, 70% of these loyal 
+- Only 0.01% of customers qualify as loyal, highlighting a major retention gap. Notably, 70% of these loyal 
 customers also fall into the high-value segment
 
-\###Retention Analysis (Cohort)
+### Retention Analysis (Cohort)
 
-\- Customers grouped by first purchase month
+- Customers grouped by first purchase month
 
-\- Retention rate calculated month‑over‑month
+- Retention rate calculated month‑over‑month
 
 Insight:
 
-\- Customer retention is very low, reflecting the natural behavior of this dataset’s one‑time‑buyer–heavy market.
+- Customer retention is very low, reflecting the natural behavior of this dataset’s one‑time‑buyer–heavy market.
 
-\###Product Performance
+### Product Performance
 
-\- Identified top categories and top products
+- Identified top categories and top products
 
 Insight: A small number of categories dominate total revenue.
 
@@ -145,42 +141,42 @@ Insight: A small number of categories dominate total revenue.
 
 
 
-\## Key Insights
+## Key Insights
 
-\- 98.2% of all orders were successfully delivered 
+- 98.2% of all orders were successfully delivered 
 
-\- 37% of total revenue comes from customers in SP
+- 37% of total revenue comes from customers in SP
 
-\- - Monthly order volume shows an alternating rise-and-drop pattern, suggesting cyclical demand or promotional timing effects.
+ - Monthly order volume shows an alternating rise-and-drop pattern, suggesting cyclical demand or promotional timing effects.
 
-\- Customer retention is low
+- Customer retention is low
 
-\- A few product categories drive most sales
-
-
-
-\## Recommendations
-
-\- Strengthen customer retention strategies
-
-\- Focus on nurturing high‑value customers
-
-\- Promote and expand high‑performing categories
-
-\- Improve post‑purchase engagement to increase repeat orders
+- A few product categories drive most sales
 
 
 
-\## Next Steps
+## Recommendations
 
-\- Hypothesis testing using python
+- Strengthen customer retention strategies
 
-\- Interpret results with statistical measures.
+- Focus on nurturing high‑value customers
 
-\- Expand analysis to seller performance and logistics
+- Promote and expand high‑performing categories
+
+- Improve post‑purchase engagement to increase repeat orders
 
 
-\## Author
+
+## Next Steps
+
+- Hypothesis testing using python
+
+- Interpret results with statistical measures.
+
+- Expand analysis to seller performance and logistics
+
+
+## Author
 
 Pandeeswari Murugesan
 
