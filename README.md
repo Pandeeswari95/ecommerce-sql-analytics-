@@ -62,7 +62,17 @@ The dataset includes order details, customer demographics, product information, 
 
 
 
-## Data Preparation
+## Data Model(SQL)
+
+### Star Schema Diagram 
+
+![Star Schema](diagrams/datamodel_starschema.drwaio.png)
+
+### Tables Included
+- fact_order_items  
+- dim_customers  
+- dim_products  
+- dim_sellers  
 
 ### Key steps performed:
 
@@ -85,14 +95,16 @@ The dataset includes order details, customer demographics, product information, 
 - Created additional calculated fields for analysis
 
 
-
 ## Analysis Summary
+
 
 ### Sales Performance
 
 - Monthly revenue and order trends analysed
 
 - Calculated YTD cumulative revenue.
+  
+- Built monthly sales KPI dashboard with revenue and order trend analysis
 
 Insight:
 
@@ -102,11 +114,9 @@ Insight:
 
 ### Customer Analysis (RFM)
 
-Segmented customers by:
-
-- Frequency
-
-- Monetary value
+- Conducted RFM analysis to segment customers based on purchase frequency and spending.
+  
+- Built dashboard highlighting high value customers and purchasing behaviour.
 
 Insight: 
 
@@ -131,14 +141,70 @@ Insight:
 
 Insight: A small number of categories dominate total revenue.
 
-##  Dashboard Pages
-### 1. E-Commerce overview
-### 2. Customer performance
-### 3. sales performance
-### 4.retention analysis
+## Power BI analysis and visualization
 
+### Tables Loaded into Power BI
 
+#### **Fact Table**
+- fact_order_items
 
+#### **Dimension Tables**
+- dim_customers  
+- dim_products  
+- dim_sellers
+
+#### **Raw table**
+ - order_payments(not part of schema only to show payment distribution across orders)
+
+#### **Additional SQL Analysis Views (Used for KPIs Only)**
+- sales_monthly_performance (used for MoM, YTD, KPI calculations)
+- customer_peformnce (used for frquency segment,customer life time, KPI calculations)
+- customer_cohort_retention_analysis(used for visualization)
+
+### Table created in PowerBI 
+
+#### **Dim Date**
+
+ - DimDate(included in core star schema)
+
+#### Why Additional SQL Views were created 
+
+Extra SQL analysis views were created to:
+- Pre‑calculate MoM, YTD metrics, Retention rate,customer lifetime,segmentation
+- Improve performance by reducing DAX complexity  
+- Ensure consistent KPI logic across Power BI visuals
+
+These SQL analysis views are not part of the core star schema, but they are connected to the dimension tables in Power BI to support advanced KPIs (MoM, YTD, heatmaps, and performance metrics).
+
+#### Why order_payments table loaded 
+
+ - Not part of schema only to show payment distribution across orders in business overview
+
+### Power BI Data Model
+
+This project uses a star schema optimized for analytics.  
+
+Below is the final Power BI model used for reporting:
+
+![Power BI Model](screenshot/powerbi_model.png)
+
+###  Dashboard Pages
+
+#### 1. E-Commerce overview
+
+  ![overview](screenshot/ecommerce_overview.png)
+  
+#### 2. Customer performance
+
+  ![customer performance](screenshot/customer_performance.png)
+  
+#### 3. sales performance
+
+  ![sales performance](screenshot/sales_monthly_performance.png)
+  
+#### 4.retention analysis
+
+  ![retention analysis](screenshot/customer_cohort_retention_analysis.png)
 
 
 ## Key Insights
@@ -147,12 +213,11 @@ Insight: A small number of categories dominate total revenue.
 
 - 37% of total revenue comes from customers in SP
 
- - Monthly order volume shows an alternating rise-and-drop pattern, suggesting cyclical demand or promotional timing effects.
+- Monthly order volume shows an alternating rise-and-drop pattern, suggesting cyclical demand or promotional timing effects.
 
 - Customer retention is low
 
 - A few product categories drive most sales
-
 
 
 ## Recommendations
