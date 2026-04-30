@@ -66,7 +66,7 @@ The dataset includes order details, customer demographics, product information, 
 
 ### Star Schema Diagram 
 
-![Star Schema](diagrams/datamodel_starschema.drwaio.png)
+![Star Schema](diagrams/datamodel_starschema.drawio.png)
 
 ### Tables Included
 - fact_order_items  
@@ -186,25 +186,25 @@ This project uses a star schema optimized for analytics.
 
 Below is the final Power BI model used for reporting:
 
-![Power BI Model](screenshot/powerbi_model.png)
+![Power BI Model](powerbi/screenshot/powerbi_model.png)
 
 ###  Dashboard Pages
 
 #### 1. E-Commerce overview
 
-  ![overview](screenshot/ecommerce_overview.png)
+  ![overview](powerbi/screenshot/ecommerce_overview.png)
   
 #### 2. Customer performance
 
-  ![customer performance](screenshot/customer_performance.png)
+  ![customer performance](powerbi/screenshot/customer_performance.png)
   
 #### 3. sales performance
 
-  ![sales performance](screenshot/sales_monthly_performance.png)
+  ![sales performance](powerbi/screenshot/sales_monthly_performance.png)
   
 #### 4.retention analysis
 
-  ![retention analysis](screenshot/customer_cohort_retention_analysis.png)
+  ![retention analysis](powerbi/screenshot/customer_cohort_retention_analysis.png)
 
 
 ## Key Insights
